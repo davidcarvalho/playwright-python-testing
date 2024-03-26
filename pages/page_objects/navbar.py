@@ -9,9 +9,9 @@ from pages.page_objects.base_page import BasePage
 
 @dataclasses.dataclass
 class NavbarMenuOptions:
+    ABOUTUS: str = 'About us'
     SERVICES: str = 'Services'
     PORTFOLIO: str = 'Portfolio'
-    TEAM: str = 'Team'
     RESOURCES: str = 'Resources'
     CAREERS: str = 'Careers'
     BLOG: str = 'Blog'

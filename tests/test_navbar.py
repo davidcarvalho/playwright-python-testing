@@ -12,10 +12,10 @@ def test_navbar_correct_links(navbar: Navbar, pytestconfig: pytest.Config) -> No
     menu_links = {
         f'{base_url}/{menu_text.lower()}'
         for menu_text in menu_items
-        if menu_text != 'Careers'
+        if menu_text != 'Careers' and menu_text != 'About us'
     }
     menu_links.add('https://career.stxnext.com')
-
+    menu_links.add('https://dev.stxnext.com/about-us')
     navbar.load_and_accept_cookies()
 
     assert (
