@@ -134,3 +134,6 @@ dmypy.json
 # scratch files
 
 *scratch*
+/report.html
+/.vscode/
+/allure-results/

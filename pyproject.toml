@@ -1,18 +1,20 @@
 [tool.poetry]
 name = "stx-blog"
 version = "0.1.0"
-authors = [""]
+authors = ["david carvalho"]
 description = ""
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pytest = "^7.4.3"
+pytest = "^8.1.1"
 pytest-playwright = "^0.4.3"
 pytest-base-url = "^2.0.0"
 pre-commit = "^3.5.0"
 pytest-xdist = "^3.2.0"
 playwright = "^1.39.0"
+allure-pytest = "^2.13.5"
+pytest-html = "^4.1.1"
 
 
 [build-system]
