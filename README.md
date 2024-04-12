@@ -1,13 +1,12 @@
-# Playwright STX End-to-end tests
+# Playwright End-to-end tests
 
 ## About
 
-The purpose of this repo is to create a structured playground for automating end-to-end tests for the company
-page https://www.stxnext.com. Feel free to contribute and have fun!
+The purpose of this repo is to create a structured playground for automating end-to-end tests for UI.
 
 ## Project structure
 
-Project implements Page Object Pattern architecture as it's Playwright compliant and nobody ever got fired for using it.
+Project implements Page Object Pattern architecture as Playwright compliant.
 
 * **tests:** definition of test suites and scenarios
 
@@ -108,11 +107,11 @@ To run all the scripts with default setting simply type:
 
 #### Running specific test
 
-    pytest tests/test_stx_blog.py::test_blog_page_and_filter_articles
+    pytest tests/test_blog_page.py::test_navbar.py
 
 #### Running tests matching given expression
 
-    pytest -k stx
+    pytest -k navbar
 
 For more fancy ways of defining your suite check the official
 markers [documentation](https://docs.pytest.org/en/latest/example/markers.html)
@@ -130,6 +129,7 @@ commands like: [continue, return, quit](https://docs.python.org/3/library/pdb.ht
 ```python
 def test_something(pytestconfig) -> None:
     base_url = pytestconfig.getini("base_url")
+    print(base_url)
     breakpoint()
 ```
 
@@ -174,7 +174,7 @@ playwright = sync_playwright().start()
 # Pass headless=False to launch() to see the browser UI
 browser = playwright.chromium.launch(headless=False)
 page = browser.new_page()
-page.goto("https://www.stxnext.com")
+page.goto("https://duckduckgo.com/")
 page.screenshot(path="example.png")
 browser.close()
 playwright.stop()
